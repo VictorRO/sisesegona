@@ -1,0 +1,81 @@
+/* 
+Theme Name: Sisè Segona WP
+Theme URI: 
+Description: 
+Version: 1.0
+Author: Víctor Rodríguez
+Author URI: http://www.sisesegona.com
+Tags: white, one-column, fixed-width, light
+Last updated: 
+*/
+
+/* Elements */
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: 'Open Sans', Arial, sans-serif;	
+	line-height: 20px;
+	font-size: 16px; 
+	color: #151B1E;
+	background: #151B1E url(img/background.png) repeat 0px 0px;
+	border-top: 10px solid #151B1E;
+}
+
+/* Common */
+header,
+section,
+footer {
+	width: 70%;
+	margin: 0 auto;
+}
+
+a {
+	color: #41444C;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #151B1E;
+}
+
+/* Header */
+header {
+	height: 104px;
+	margin-top: 30px;
+}
+
+header h1 a { 
+  float: left;
+  background: transparent url(img/h1-logo.png) no-repeat scroll 0% 50%;
+  text-indent: -10000pt;
+  font-size: 1px;
+  width: 261px;
+  height: 104px;
+}
+
+nav {
+	margin-top: 70px;
+	float: right;
+	font-weight: bold;
+	font-style: italic;
+}
+
+nav ul li {
+	display: inline;
+	margin-left: 20px;
+}
+
+/* Main */
+section {
+	margin-top: 30px;
+}
+
+h2 {
+	font-size: 26px;
+	line-height: 32px;
+}
+
+/* Footer */
