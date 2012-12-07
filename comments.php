@@ -57,9 +57,6 @@
 		
 	<?php endif; ?>
 <?php endif; ?>
-<div class="entry">
-
-</div>
 
 <?php if ('open' == $post-> comment_status) : ?>
 

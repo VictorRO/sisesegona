@@ -1,5 +1,5 @@
 <?php get_header();?>
-<div id="main">
+<div id="main">author
 	<div id="content">
 	<?php
 	global $wp_query;

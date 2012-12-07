@@ -1,5 +1,5 @@
 <?php get_header();?>
-<div id="main">
+<div id="main">archives
 	<div id="content">
       <div class="post">
         <h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>

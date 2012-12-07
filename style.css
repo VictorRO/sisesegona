@@ -9,73 +9,257 @@ Tags: white, one-column, fixed-width, light
 Last updated: 
 */
 
-/* Elements */
+@font-face {
+	font-family : "'Open Sans'";
+	font-style : normal;
+	font-weight : 400;
+	src : local('Open Sans'), local('OpenSans'), url('http://fonts.googleapis.com/css?family=Open+Sans') format('woff');
+}
+
+/* Reset All */
+
 * {
 	margin:0;
 	padding:0;
 }
 
-body {
-	font-family: 'Open Sans', Arial, sans-serif;	
-	line-height: 20px;
-	font-size: 16px; 
-	color: #151B1E;
-	background: #151B1E url(img/background.png) repeat 0px 0px;
-	border-top: 10px solid #151B1E;
+/* Wordpress Core */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
 }
 
 /* Common */
-header,
+
+body {
+	font-family: 'Open Sans', Arial, sans-serif;	
+	line-height: 26px;
+	font-size: 18px; 
+	color: #151B1E;
+	background: #FFF url(img/background.png) repeat 0px 0px;
+}
+
+p {
+	margin: 1em 0;
+}
+
 section,
 footer {
-	width: 70%;
-	margin: 0 auto;
+	max-width: 960px;
+	width: 80%;
+	margin: 20px auto;
 }
 
 a {
-	color: #41444C;
+	color: #151B1E;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #151B1E;
+	color: #004A6F;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
 }
 
 /* Header */
 header {
-	height: 104px;
-	margin-top: 30px;
+	height: 63px;
+	width: 100%;
+}
+
+header hgroup {
+	max-width: 660px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1 {
+	margin-top: 40px;
+	background: transparent url(img/h1-logo-1l-color.png) no-repeat 0% 50%;
+  width: 268px;
+  height: 63px;
 }
 
 header h1 a { 
   float: left;
-  background: transparent url(img/h1-logo.png) no-repeat scroll 0% 50%;
+  background: transparent url(img/h1-logo-1l.png) no-repeat 0% 50%;
   text-indent: -10000pt;
   font-size: 1px;
-  width: 261px;
-  height: 104px;
+  width: 268px;
+  height: 63px;
 }
 
-nav {
-	margin-top: 70px;
-	float: right;
-	font-weight: bold;
+.fade {
+	opacity: 1;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+	opacity: 0;
+}
+
+header nav {
+	width: 100%;
+	font-weight: 300;
 	font-style: italic;
+	font-size: 0.85em;
 }
 
-nav ul li {
+header nav a:hover {
+	color: #004A6F;
+}
+
+header nav ul li {
 	display: inline;
-	margin-left: 20px;
+	margin: -10px 5%;
 }
 
 /* Main */
-section {
-	margin-top: 30px;
+section,
+article {
+	margin-top: 40px;
+}
+
+article hgroup {
+	text-align: center;
 }
 
 h2 {
-	font-size: 26px;
-	line-height: 32px;
+	font-size: 34px;
+	line-height: 42px;
+	margin-bottom: 20px;
+}
+
+h2 a {
+	text-shadow: 0px 1px 0px #FFF, 0px 2px 5px #999;
+}
+
+h3 {
+	font-size: 1em;
+	line-height: 1.4em;
+	font-weight: 300;
+	font-style: italic;
+	color: #9196a1;
+	text-align: center;
+}
+
+div.entry {
+	max-width: 660px;
+	border: 1px solid #CCC;
+	margin: 20px auto;
+	padding: 10px 40px;
+	background-color: #FFF;
+}
+
+.comments,
+.commentlist {
+	max-width: 960px;
+	margin: 20px auto;
+	padding: 10px 40px;
+}
+
+div.tags {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+#commentform {
+	width: 75%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+#commentform textarea {
+	max-width: 660px;
+	margin: 0 auto;
 }
 
 /* Footer */
+footer {
+	text-align: center;
+	font-size: 0.85em;
+}
