@@ -20,16 +20,16 @@
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
-	<ol class="commentlist">
+	<ul class="commentlist">
 
 	<?php foreach ($comments as $comment) : ?>
 
-		<li id="comment-<?php comment_ID() ?>" class="<?php echo $oddcomment; /* Style differently if comment author is blog author */ if ($comment->comment_author_email == get_the_author_email()) { echo ' authorcomment'; } ?>">
+		<li id="comment-<?php comment_ID() ?>" class="<?php echo $oddcomment; /* Style differently if comment author is blog author */ if ($comment->comment_author_email == get_the_author_meta('email')) { echo ' authorcomment'; } ?>">
 			<div class="cmtinfo">
 			<?php 
 			   echo get_avatar( $comment, $size = '28', $default = 'default' ); 
 			  ?>
-			<cite><?php comment_author_link() ?></cite><em><div class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title="">on <?php comment_date('d M Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('[edit]','',''); ?></div></em>
+			<cite><?php comment_author() ?></cite> <em><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('d M Y') ?></a> <?php edit_comment_link('[edit]','',''); ?></em>
 			</div>
 			<?php if ($comment->comment_approved == '0') : ?>
 			<em>Your comment is awaiting moderation.</em>
@@ -44,7 +44,7 @@
 
 	<?php endforeach; /* end for each comment */ ?>
 
-	</ol>
+	</ul>
 
  <?php else : // this is displayed if there are no comments so far ?>
 
@@ -74,25 +74,18 @@
 
 <?php else : ?>
 
-<p><input type="text" class="textbox" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
-<label for="author"><small>Name <?php if ($req) _e('(required)'); ?></small></label></p>
+<input type="text" class="textbox left" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" placeholder="Nombre <?php if ($req) _e('(required)'); ?>"/>
 
-<p><input type="text" class="textbox" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-<label for="email"><small>Mail (hidden) <?php if ($req) _e('(required)'); ?></small></label></p>
-
-<p><input type="text" class="textbox" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-<label for="url"><small>Website</small></label></p>
+<input type="text" class="textbox right" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" placeholder="tu@email.com <?php if ($req) _e('(required)'); ?>"/>
 
 <?php endif; ?>
 
 <!--<p><small><strong>XHTML:</strong> You can use these tags: <?php echo allowed_tags(); ?></small></p>-->
 
-<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+<textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4" placeholder="Tu comentario..."></textarea>
 
-<p>
-  <input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-</p>
 <?php do_action('comment_form', $post->ID); ?>
 
 </form>
