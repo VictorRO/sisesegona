@@ -6,7 +6,7 @@
             if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
 				?>
 				
-				<p class="nocomments"><?php _e("This post is password protected. Enter the password to view comments."); ?><p>
+				<p class="nocomments">Este artículo está protegido por clave. Introduce tu clave para ver los comentarios.<p>
 				
 				<?php
 				return;
@@ -32,7 +32,7 @@
 			<cite><?php comment_author() ?></cite> <em><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('d M Y') ?></a> <?php edit_comment_link('[edit]','',''); ?></em>
 			</div>
 			<?php if ($comment->comment_approved == '0') : ?>
-			<em>Your comment is awaiting moderation.</em>
+			<em>Tu comentario debe ser aprovado.</em>
 			<?php endif; ?>
 			<?php comment_text() ?>			
 		</li>
@@ -53,24 +53,24 @@
 		
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<p class="nocomments">Comments are closed at this time.</p>
+		<p class="nocomments">Comentarios cerrados.</p>
 		
 	<?php endif; ?>
 <?php endif; ?>
 
 <?php if ('open' == $post-> comment_status) : ?>
 
-<h3 id="respond">Leave a Reply</h3>
+<h3 id="respond">Deja tu comentario</h3>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-<p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">logged in</a> to post a comment.</p>
+<p>Debes estar identificado <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">logged in</a> para comentar el artículo.</p>
 <?php else : ?>
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 
 <?php if ( $user_ID ) : ?>
 
-<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="<?php _e('Log out of this account') ?>">Logout &raquo;</a></p>
+<p>Identificado como <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="<?php _e('Log out of this account') ?>">Logout &raquo;</a></p>
 
 <?php else : ?>
 

@@ -18,7 +18,7 @@
 		<h1><a href="<?php echo get_option('home'); ?>/" class="fade"><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></a></h1>
 		<nav>
     		<ul>
-    			<li>A blog by <a href="http://localhost/rodriguezortega">Víctor Rodríguez</a></li>
+    			<li>Por <a href="http://localhost/rodriguezortega">Víctor Rodríguez</a> - <?php bloginfo('description'); ?></li>
     		</ul>
     	</nav>
 	</hgroup>

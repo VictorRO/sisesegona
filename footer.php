@@ -1,9 +1,7 @@
 <footer>
 	<p>
-		<span>
-			<a href="<?php bloginfo('url'); ?>/wp-admin/" title="Site Admin">Site Admin</a> | Theme by <a href="http://www.v-code.net" title="v.code">VictorRO</a>
-		</span>
-		<strong><?php bloginfo('name');?></strong> Copyright &copy; <?php echo date('Y');?> All Rights Reserved
+		<a href="<?php bloginfo('url'); ?>/wp-admin/" title="Site Admin">Site Admin</a> | <strong>Sisè Segona</strong> es un tema creado por <a href="http://rodriguezortega.com" title="Víctor Rodríguez">Victor Rodríguez</a> |		
+		Licencia <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Reconocimiento 3.0</a>
 	</p>
 	<?php wp_footer();?>
 </footer>
