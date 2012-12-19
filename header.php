@@ -18,7 +18,10 @@
 		<h1><a href="<?php echo get_option('home'); ?>/" class="fade"><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></a></h1>
 		<nav>
     		<ul>
-    			<li>Por <a href="http://localhost/rodriguezortega">Víctor Rodríguez</a> - <?php bloginfo('description'); ?></li>
+    			<li>Por <a href="http://rodriguezortega.com" rel="author">Víctor Rodríguez</a> - <?php bloginfo('description'); ?></li>
+    			<li class="right entypo"><a href="<?php bloginfo('rss2_url'); ?>">&#59194;</a></li>
+    			<li class="right social"><a href="https://twitter.com/_VictorRO_" rel="author" target="_blank">&#62217;</a></li>
+    			<li class="right social"><a href="http://es.linkedin.com/in/victorrodriguezortega" rel="author" target="_blank">&#62232;</a></li>
     		</ul>
     	</nav>
 	</hgroup>
