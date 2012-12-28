@@ -11,7 +11,7 @@
     <?php wp_link_pages(); ?>
   </div>
   <footer class="tags">
-    <?php the_tags('', ' / '); ?>
+    <?php the_tags('', ' '); ?>
   </footer>
 </article>
 

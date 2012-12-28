@@ -160,7 +160,7 @@ a:hover {
 
 pre {
 	max-width: 660px;
-	margin: 2em auto !important;
+	margin: 1em auto !important;
 	border: 0 !important;
 }
 
@@ -270,7 +270,7 @@ h2 {
 
 h2 a {
 	color: #151B1E;
-	text-shadow: rgba(0, 0, 0, 0.2) 3px 3px 0px;
+	text-shadow: 1px 1px 1px white, 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
@@ -300,9 +300,21 @@ section nav {
 	margin: -1em auto 3em;
 }
 
+section .tags a,
+section nav a {
+	background-color: #EEE;
+	color: #666;
+	padding: 5px 10px;
+	text-shadow: 1px 1px 0px #FFF;
+	border-radius: 5px;
+	border: 1px solid #CCC;
+}
+
 section .tags a:hover,
 section nav a:hover {
-	text-decoration: underline;
+	background-color: #DDD;
+	color: #555;
+	text-shadow: 1px 1px 0px #EEE;
 }
 
 section nav ul li {
@@ -408,4 +420,26 @@ div.tags {
 footer {
 	text-align: center;
 	font-size: 0.85em;
+}
+
+/* Jetpack */
+
+div.entry {
+	position: relative;
+}
+
+div.sharedaddy .sd-block,
+div.sharedaddy .sd-content {
+	width: auto !important;
+}
+
+div.sharedaddy .sd-sharing {
+	position: absolute;
+	bottom: -14px;
+	right: 0px;
+	border: 0 !important;
+}
+
+div.sharedaddy a.sd-button {
+	border: 0 !important;
 }
