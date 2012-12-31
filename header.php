@@ -11,11 +11,13 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Lobster|Open+Sans' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
+<script src="<?php bloginfo('template_directory') ?>/js/jquery-1.8.3.min.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/js/main.js"></script>
 </head>
 <body>
 <header>  
 	<hgroup>
-		<h1><a href="<?php echo get_option('home'); ?>/" class="fade"><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></a></h1>
+		<h1><a id="site-name" href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 		<nav>
     		<ul>
     			<li>Por <a href="http://rodriguezortega.com" rel="author">Víctor Rodríguez</a> - <?php bloginfo('description'); ?></li>
