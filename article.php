@@ -2,7 +2,7 @@
   <hgroup>
 		<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
     <h3>
-      <?php the_time('j F, Y'); ?>
+      Escrito el <?php the_time('j F, Y'); ?>
 	    <?php edit_post_link(); ?>
 	  </h3>
 	</hgroup>

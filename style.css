@@ -51,7 +51,7 @@ Last updated:
 .aligncenter,
 div.aligncenter {
     display: block;
-    margin: 5px auto 5px auto;
+    margin: 5px auto 5px auto !important;
 }
 
 .alignright {
@@ -86,7 +86,7 @@ a img.alignleft {
 a img.aligncenter {
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
 .wp-caption {
@@ -148,7 +148,8 @@ footer {
 }
 
 a,
-a .dark {
+a .dark,
+#submit {
 	color: #004A6F;
 	text-decoration: none;
 	-webkit-transition-property: background-color, color, border;
@@ -171,11 +172,18 @@ pre.prettyprint {
 }
 
 .right {
-	float: right;
+	display: block;
+	float: right !important;
 }
 
 .left {
-	float: left;
+	display: block;
+	float: left !important;
+}
+
+.center {
+	display: block;
+	margin: 0 auto !important;
 }
 
 .entypo,
@@ -188,13 +196,31 @@ pre.prettyprint {
 	font: normal 36px/36px 'entypo-social', arial !important;
 }
 
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
 /* Header */
 header {
 	width: 100%;
-}
-
-header hgroup {
-	width: 80%;
+	max-width: 960px;
 	margin: 0 auto;
 }
 
@@ -277,26 +303,19 @@ h3 {
 	text-align: center;
 }
 
-div.entry {
-	background-color: #FFF;
-	border: 1px solid #CCC;
-	box-shadow: 0px 0px 5px 0px #CCC;
-	-webkit-box-shadow: 0px 0px 5px 0px #CCC;
-}
-
 div.entry,
 section nav {
 	max-width: 960px;
 	margin: 20px auto;
-	padding: 10px 40px;
 }
 
 section nav {
-	margin: -1em auto 3em;
+	margin: 0 auto 5em auto;
 }
 
 section .tags a,
-section nav a {
+section nav a,
+#submit {
 	background-color: #EEE;
 	color: #666;
 	padding: 5px 10px;
@@ -306,7 +325,8 @@ section nav a {
 }
 
 section .tags a:hover,
-section nav a:hover {
+section nav a:hover,
+#submit:hover {
 	background-color: #DDD;
 	color: #555;
 	text-shadow: 1px 1px 0px #EEE;
@@ -333,29 +353,28 @@ blockquote {
 .commentlist {
 	max-width: 960px;
 	margin: 20px auto;
-	padding: 10px 40px;
 	font-size: 0.95em;
 }
 
 .comments h3 {
-	margin-bottom: 1em;
-	font-size: 1.2em;
 	color: #151B1E;
 }
 
 .commentlist {
-	width: 660px;
+	margin-top: 0;
+	max-width: 660px;
 }
 
 .commentlist li {
 	list-style: none;
-	margin: 0 0 40px 0;
+	margin: 20px 0 0 0;
 }
 
 .commentlist li.authorcomment {
 	border: 1px solid #EDE3C8;
 	padding: 20px;
 	background: #FCF6E3 url(img/62-comment.png) no-repeat 600px 13px;
+	margin-top: -1px;
 }
 
 .cmtinfo cite {
@@ -377,13 +396,15 @@ div.tags {
 }
 
 #commentform {
+	display: block;
 	width: 75%;
 	max-width: 660px;
-	margin: 0 auto;
+	margin: 1em auto 0;
 }
 
 #commentform textarea {
-	width: 660px;
+	width: 100%;
+	max-width: 648px;
 	margin: 0 auto;
 }
 
@@ -397,18 +418,16 @@ div.tags {
 	font-size: 16px;
 	line-height: 22px;
 	padding: 5px;
-	border: 1px solid #9196A1;
-	margin: 1em 0;
+	border: 1px solid #CCC;
+	margin: 1em 0 0.5em 0;
 }
 
 #commentform #submit {
-	width: 250px;
+	width: 100%;
 	padding: 10px;
 	border-radius: 5px;
-	border-color: #CCC;
-	background-color: #41444C;
-	color: #EFF4FF;
 	cursor: pointer;
+	margin-top: 0;
 }
 
 /* Footer */

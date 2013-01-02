@@ -20,6 +20,8 @@
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
+  <h3>Comentarios sobre "<?php the_title(); ?>"</h3>
+  
 	<ul class="commentlist">
 
 	<?php foreach ($comments as $comment) : ?>
@@ -66,7 +68,7 @@
 <p>Debes estar identificado <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">logged in</a> para comentar el artículo.</p>
 <?php else : ?>
 
-<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="clearfix">
 
 <?php if ( $user_ID ) : ?>
 
@@ -82,9 +84,9 @@
 
 <!--<p><small><strong>XHTML:</strong> You can use these tags: <?php echo allowed_tags(); ?></small></p>-->
 
-<textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4" placeholder="Tu comentario..."></textarea>
+<textarea name="comment" id="comment" rows="10" tabindex="4" placeholder="Tu comentario..."></textarea>
 
-<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" class="right" />
 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
 <?php do_action('comment_form', $post->ID); ?>
 
