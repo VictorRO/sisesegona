@@ -212,6 +212,10 @@ header h1 a .dark {
 	color: #151B1E;
 }
 
+header h1 a:hover {
+	color: #5D7E8F;
+}
+
 header h1 a,
 h2 a {
 	text-shadow: 1px 1px 1px #FFF, 2px 2px 4px rgba(0, 0, 0, 0.3);
