@@ -133,7 +133,7 @@ body {
 	font-size: 18px; 
 	color: #151B1E;
 	border-top: 10px solid #151B1E;
-	background: #FFF url(img/background.png) repeat 0px 0px;
+	background: #FFF url(img/background-lighter.png) repeat 0px 0px;
 }
 
 p {
@@ -186,14 +186,21 @@ pre.prettyprint {
 	margin: 0 auto !important;
 }
 
-.entypo,
-.entypo a {
-	font: normal 36px/36px 'entypo', arial !important;
+.entypo [data-icon]:before {
+  font-family: 'entypo';
+  content: attr(data-icon);
+	speak: none;
 }
 
-.social,
-.social a {
-	font: normal 36px/36px 'entypo-social', arial !important;
+.social [data-icon]:before {
+  font-family: 'entypo-social';
+  content: attr(data-icon);
+	speak: none;
+}
+
+.entypo,
+.social {
+	font-size: 36px;
 }
 
 .clearfix:after {
@@ -219,7 +226,7 @@ html[xmlns] .clearfix {
 
 /* Header */
 header {
-	width: 100%;
+	width: 80%;
 	max-width: 960px;
 	margin: 0 auto;
 }
@@ -248,28 +255,28 @@ h2 a {
 	letter-spacing: -1px;	
 }
 
-header nav {
+header div {
 	width: 100%;
 	font-weight: 300;
 	font-style: italic;
 }
 
-header nav a {
+header div a {
 	font-style: normal;
 	font-size: 1.05em;
 	color: #151B1E;
 }
 
-header nav a:hover,
+header div a:hover,
 header h1 a:hover .dark {
 	color: #004A6F;
 }
 
-header nav ul {
+header div ul {
 	width: 100%;
 }
 
-header nav ul li {
+header div ul li {
 	display: inline;
 	margin: 0 20px 0 0;
 }
