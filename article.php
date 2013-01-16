@@ -1,10 +1,10 @@
 <article id="post-<?php the_ID(); ?>">
   <hgroup>
 		<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-    <h3>
+    <div class="article-meta">
       Escrito el <?php the_time('j F, Y'); ?>
 	    <?php edit_post_link(); ?>
-	  </h3>
+	  </div>
 	</hgroup>
 	<div class="entry">
 	  <?php the_content(__('Continue Reading &#187;')); ?>
@@ -15,6 +15,4 @@
   </footer>
 </article>
 
-<div class="comments">
-  <?php comments_template(); ?>
-</div>
+<?php comments_template(); ?>

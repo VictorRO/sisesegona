@@ -129,7 +129,7 @@ a img.aligncenter {
 
 body {
 	font-family: 'Open Sans', Arial, sans-serif;	
-	line-height: 32px;
+	line-height: 1.5em;
 	font-size: 18px; 
 	color: #151B1E;
 	border-top: 10px solid #151B1E;
@@ -140,11 +140,15 @@ p {
 	margin: 1em 0;
 }
 
+h4 + p {
+	margin: 0 0 1em;
+}
+
 section,
 footer {
 	max-width: 1280px;
 	width: 80%;
-	margin: 20px auto;
+	margin: 1.333em auto;
 }
 
 a,
@@ -186,12 +190,14 @@ pre.prettyprint {
 	margin: 0 auto !important;
 }
 
+.entypo,
 .entypo [data-icon]:before {
   font-family: 'entypo';
   content: attr(data-icon);
 	speak: none;
 }
 
+.social,
 .social [data-icon]:before {
   font-family: 'entypo-social';
   content: attr(data-icon);
@@ -200,7 +206,7 @@ pre.prettyprint {
 
 .entypo,
 .social {
-	font-size: 36px;
+	font-size: 3em;
 }
 
 .clearfix:after {
@@ -229,46 +235,52 @@ header {
 	width: 80%;
 	max-width: 960px;
 	margin: 0 auto;
+	height: 90px;
 }
 
-header h1 {
+h1 {
+	font-size: 1.5em;
 	padding-top: 30px;
 }
 
-header h1 a { 
-	font-size: 50px;
-	line-height: 63px;
+h1 img {
+	vertical-align: -5px;
+}
+
+h1 a { 
 	color: #41444C;
 }
 
-header h1 a .dark {
+h1 a .dark {
 	color: #151B1E;
 }
 
-header h1 a:hover {
+h1 a:hover {
 	color: #5D7E8F;
 }
 
-header h1 a,
+h1 a,
 h2 a {
 	text-shadow: 1px 1px 1px #FFF, 2px 2px 4px rgba(0, 0, 0, 0.3);
 	letter-spacing: -1px;	
 }
 
 header div {
-	width: 100%;
 	font-weight: 300;
 	font-style: italic;
+	font-size: 0.889em;
+	margin-top: 0.5em;
+	padding-top: 24px;
 }
 
 header div a {
 	font-style: normal;
-	font-size: 1.05em;
+	font-weight: normal;
 	color: #151B1E;
 }
 
 header div a:hover,
-header h1 a:hover .dark {
+h1 a:hover .dark {
 	color: #004A6F;
 }
 
@@ -292,9 +304,8 @@ article hgroup {
 }
 
 h2 {
-	font-size: 60px;
-	line-height: 60px;
-	margin-bottom: 20px;
+	font-size: 3.375em;
+	line-height: 1.1em;
 }
 
 h2 a {
@@ -302,18 +313,30 @@ h2 a {
 }
 
 h3 {
+	line-height: 1.1em;
+	text-align: center;
+}
+
+.article-meta {
 	font-size: 1em;
 	line-height: 1.4em;
 	font-weight: 300;
 	font-style: italic;
-	color: #9196a1;
+	color: #666;
 	text-align: center;
+}
+
+div.entry {
+	max-width: 660px;
+}
+
+section nav {
+	max-width: 960px;
 }
 
 div.entry,
 section nav {
-	max-width: 960px;
-	margin: 20px auto;
+	margin: 1.333em auto;
 }
 
 section nav {
@@ -350,17 +373,26 @@ section nav ul li {
 }
 
 blockquote {
-	margin-left: 20px;
-	border-left: 1px solid #CCC;
-	padding-left: 20px;
+	margin: 0 1.333em;
+	border-left: 2px solid #004A6F;
+	padding: 0 1.333em;
 	font-style: italic;
+	color: #333;
+}
+
+.comments {
+	margin: 3em auto 2em;
+}
+
+.commentlist {
+	margin: 20px auto;
 }
 
 .comments,
 .commentlist {
 	max-width: 960px;
-	margin: 20px auto;
-	font-size: 0.95em;
+	font-size: 0.889em;
+	line-height: 1.4em;
 }
 
 .comments h3 {
@@ -368,7 +400,7 @@ blockquote {
 }
 
 .commentlist {
-	margin-top: 0;
+	margin-top: 1em;
 	max-width: 660px;
 }
 
@@ -377,11 +409,21 @@ blockquote {
 	margin: 20px 0 0 0;
 }
 
+.commentlist li {
+	border: 1px solid #EEE;
+	padding: 20px;
+	background-color: #FDFDFD;
+	margin-top: 0;
+}
+
 .commentlist li.authorcomment {
 	border: 1px solid #EDE3C8;
-	padding: 20px;
 	background: #FCF6E3 url(img/62-comment.png) no-repeat 600px 13px;
 	margin-top: -1px;
+}
+
+.commentlist li + li {
+	border-top: 0px;
 }
 
 .cmtinfo cite {
@@ -441,6 +483,7 @@ div.tags {
 footer {
 	text-align: center;
 	font-size: 0.85em;
+	margin: 2em auto;
 }
 
 /* Jetpack */

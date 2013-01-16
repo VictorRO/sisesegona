@@ -9,23 +9,24 @@
 <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Lobster|Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 <script src="<?php bloginfo('template_directory') ?>/js/jquery-1.8.3.min.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/js/main.js"></script>
 </head>
 <body>
 <header>  
-	<hgroup>
-		<h1><a id="site-name" href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+	<hgroup class="left">
+		<h1><img src="<?php bloginfo('template_directory') ?>/img/icon.png" /> <a id="site-name" href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+		<span><?php bloginfo('description'); ?></span>
 	</hgroup>  
-  <div>
+  <div class="right">
     <ul>
-      <li>Por <a href="http://rodriguezortega.com" rel="author">Víctor Rodríguez</a> - <?php bloginfo('description'); ?></li>
-    	<li class="right entypo"><a href="<?php bloginfo('rss2_url'); ?>"><span data-icon="&#59194;"></span></a></li>
-    	<li class="right social"><a href="https://twitter.com/_VictorRO_" rel="author" target="_blank"><span data-icon="&#62217;"></span></a></li>
-    	<li class="right social"><a href="http://es.linkedin.com/in/victorrodriguezortega" rel="author" target="_blank"><span data-icon="&#62232;"></span></a></li>
-    	<li class="right social"><a href="https://github.com/VictorRO" target="_blank"><span data-icon="&#62208;"></span></a></li>
+    	<li class="right entypo"><a href="<?php bloginfo('rss2_url'); ?>">&#59194;</a></li>
+    	<li class="right social"><a href="https://twitter.com/_VictorRO_" rel="author" target="_blank">&#62217;</a></li>
+    	<li class="right social"><a href="http://es.linkedin.com/in/victorrodriguezortega" rel="author" target="_blank">&#62232;</a></li>
+    	<li class="right social"><a href="https://github.com/VictorRO" target="_blank">&#62208;</a></li>
+    	<li class="right entypo"><a href="http://rodriguezortega.com">&#8505;</a></li>
     </ul>
   </div>
 </header>
