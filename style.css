@@ -502,16 +502,15 @@ div.entry {
 
 div.sharedaddy .sd-block,
 div.sharedaddy .sd-content {
-	width: auto !important;
+	width: 100% !important;
 }
 
-div.sharedaddy .sd-sharing {
-	position: absolute;
-	bottom: -14px;
-	right: 0px;
-	border: 0 !important;
+div.sharedaddy .sd-content ul {
+	width: 140px;
+	margin: 0 auto -3em !important;
 }
 
+div.sharedaddy .sd-sharing,
 div.sharedaddy a.sd-button {
 	border: 0 !important;
 }
