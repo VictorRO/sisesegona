@@ -17,8 +17,8 @@
 <body>
 <header>  
 	<hgroup class="left">
-		<h1><img src="<?php bloginfo('template_directory') ?>/img/icon.png" /> <a id="site-name" href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-		<span><?php bloginfo('description'); ?></span>
+		<h1><img src="<?php bloginfo('template_directory') ?>/img/icon.png" alt="<?php bloginfo('name'); ?>"/> <a id="site-name" href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+		<h2><?php bloginfo('description'); ?></h2>
 	</hgroup>  
   <div class="right">
     <ul>

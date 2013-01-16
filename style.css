@@ -265,8 +265,11 @@ h2 a {
 	letter-spacing: -1px;	
 }
 
-header span {
+header h2 {
 	font-size: 0.889em;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #666;
 }
 
 header div {
@@ -328,6 +331,7 @@ h3 {
 	font-style: italic;
 	color: #666;
 	text-align: center;
+	margin-top: 5px;
 }
 
 div.entry {
