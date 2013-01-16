@@ -265,6 +265,10 @@ h2 a {
 	letter-spacing: -1px;	
 }
 
+header span {
+	font-size: 0.889em;
+}
+
 header div {
 	font-weight: 300;
 	font-style: italic;
