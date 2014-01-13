@@ -5,7 +5,7 @@ Description: Sisè Segona Wordpress Theme for my own personal blog.
 Version: 1.0
 Author: Víctor Rodríguez
 Author URI: http://www.rodriguezortega.com
-Tags: white, one-column, fixed-width, light
+Tags: white, one-column, light
 Last updated: 
 */
 
@@ -161,7 +161,7 @@ a .dark,
 }
 
 a:hover {
-	color: #004A6F;
+	color: #006EA5;
 }
 
 pre {
@@ -230,6 +230,12 @@ html[xmlns] .clearfix {
 	height: 1%;
 }
 
+::selection {
+	background: #FE57A1;
+	color: #FFF;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
 /* Header */
 header {
 	width: 80%;
@@ -256,7 +262,7 @@ h1 a .dark {
 }
 
 h1 a:hover {
-	color: #5D7E8F;
+	color: #006EA5;
 }
 
 h1 a,
@@ -265,10 +271,8 @@ h2 a {
 	letter-spacing: -1px;	
 }
 
-header h2 {
+header span {
 	font-size: 0.889em;
-	font-weight: normal;
-	line-height: 1.5em;
 	color: #666;
 }
 
@@ -286,7 +290,10 @@ header div a {
 	color: #151B1E;
 }
 
-header div a:hover,
+header div a:hover {
+	color: #006EA5;
+}
+
 h1 a:hover .dark {
 	color: #004A6F;
 }
@@ -426,7 +433,7 @@ blockquote {
 
 .commentlist li.authorcomment {
 	border: 1px solid #EDE3C8;
-	background: #FCF6E3 url(img/62-comment.png) no-repeat 600px 13px;
+	background: #FCF6E3 url(img/62-comment.png) no-repeat 97% 13px;
 	margin-top: -1px;
 }
 
@@ -513,4 +520,131 @@ div.sharedaddy .sd-content ul {
 div.sharedaddy .sd-sharing,
 div.sharedaddy a.sd-button {
 	border: 0 !important;
+}
+
+
+/********* responsive adaptation *******/
+
+/* iPad in portrait & landscape */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { 
+	body {
+		font-size: 22px;
+		background: #FFF url(img/background-lighter.png) repeat 0px 0px;
+	}
+	
+	section,
+	footer {
+		max-width: 1024px;
+		width: 90%;
+	}
+	
+	div.entry {
+		max-width: 1024px;
+	}
+
+	.comments,
+	.commentlist {
+		max-width: 1024px;
+		font-size: 1em;
+		line-height: 1.4em;
+	}
+	
+	#commentform {
+		display: block;
+		width: 100%;
+		max-width: 1024px;
+	}
+
+	#commentform textarea {
+		width: 98%;
+		max-width: 1024px;
+	}
+}
+
+/* iPhone 5 in portrait & landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {  
+	body {
+		font-size: 50px;
+		background: #FFF url(img/background-lighter.png) repeat 0px 0px;
+	}
+	
+	section,
+	footer {
+		max-width: 1024px;
+		width: 90%;
+	}
+	
+	div.entry {
+                max-width: 1024px;
+	}
+
+	h2 {
+		font-size: 1.8em;
+		line-height: 1.1em;
+	}
+	
+	header div.right,
+	header hgroup > span {
+		display: none;
+	}
+
+	header hgroup h1 img {
+		width: 64px;
+		height: 64px;
+	}
+	
+	header hgroup {
+		width: 100%;
+		margin: 1em 0;
+	}
+
+	header hgroup h1 {
+		max-width: 1024px;
+		text-align: center;
+	}
+
+	.commentlist {
+		margin-bottom: 1em;
+	}
+
+	.comments,
+	.commentlist {
+		max-width: 1024px;
+		font-size: 1em;
+		line-height: 1.4em;
+	}
+
+	.cmtinfo cite {
+		font-style: normal;
+	}
+
+	.commentlist li.authorcomment {
+		background: #FCF6E3;
+	}
+
+	.comments,
+	.commentlist {
+		max-width: 1024px;
+		font-size: 1em;
+		line-height: 1.4em;
+	}
+	
+	#commentform {
+		display: block;
+		width: 100%;
+		max-width: 1024px;
+	}
+
+	#commentform input,
+	#commentform textarea {
+		font-size: 0.889em;
+		line-height: 1.3335em;
+		width: 98% !important;
+		max-width: 1024px;
+	}
+}
+
+/* iPhone 2G-4S in portrait & landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { 
+	
 }

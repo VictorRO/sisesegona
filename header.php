@@ -9,7 +9,7 @@
 <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 <script src="<?php bloginfo('template_directory') ?>/js/jquery-1.8.3.min.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/js/main.js"></script>
@@ -17,8 +17,8 @@
 <body>
 <header>  
 	<hgroup class="left">
-		<h1><img src="<?php bloginfo('template_directory') ?>/img/icon.png" alt="<?php bloginfo('name'); ?>"/> <a id="site-name" href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-		<h2><?php bloginfo('description'); ?></h2>
+		<h1><img src="<?php bloginfo('template_directory') ?>/img/icon.png" /> <a id="site-name" href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+		<span><?php bloginfo('description'); ?></span>
 	</hgroup>  
   <div class="right">
     <ul>
