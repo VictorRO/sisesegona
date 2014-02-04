@@ -21,12 +21,12 @@
 		<span><?php bloginfo('description'); ?></span>
 	</hgroup>  
   <div class="right">
-    <ul>
-    	<li class="right entypo"><a href="<?php bloginfo('rss2_url'); ?>">&#59194;</a></li>
-    	<li class="right social"><a href="https://twitter.com/_VictorRO_" rel="author" target="_blank">&#62217;</a></li>
-    	<li class="right social"><a href="http://es.linkedin.com/in/victorrodriguezortega" rel="author" target="_blank">&#62232;</a></li>
-    	<li class="right social"><a href="https://github.com/VictorRO" target="_blank">&#62208;</a></li>
-    	<li class="right entypo"><a href="http://rodriguezortega.com">&#8505;</a></li>
+    <ul class="social">
+    	<li class="right"><a href="<?php bloginfo('rss2_url'); ?>" class="fi-rss"></a></li>
+    	<li class="right"><a href="https://twitter.com/_VictorRO_" rel="author" target="_blank" class="fi-social-twitter"></a></li>
+    	<li class="right"><a href="http://es.linkedin.com/in/victorrodriguezortega" rel="author" target="_blank" class="fi-social-linkedin"></a></li>
+    	<li class="right"><a href="https://github.com/VictorRO" target="_blank" class="fi-social-github"></a></li>
+    	<li class="right"><a href="http://rodriguezortega.com" class="fi-torso"></a></li>
     </ul>
   </div>
 </header>
