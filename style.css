@@ -718,7 +718,6 @@ h4 + p {
 section,
 footer {
 	max-width: 1280px;
-	width: 80%;
 	margin: 1.333em auto;
 }
 
@@ -762,7 +761,7 @@ pre.prettyprint {
 }
 
 .social {
-	font-size: 2.5em;
+	font-size: 2em;
 }
 
 .clearfix:after {
@@ -792,17 +791,27 @@ html[xmlns] .clearfix {
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
+.small {
+	font-size: 16px;
+	vertical-align: middle;
+}
+
 /* Header */
 header {
-	width: 80%;
-	max-width: 960px;
-	margin: 0 auto;
-	height: 90px;
+	width: 30%;
+}
+
+header hgroup {
+  position: fixed;
+  top: 70px;
+  left: 4%;
 }
 
 h1 {
-	font-size: 1.5em;
-	padding-top: 30px;
+	font-family: 'Medula One';
+	font-size: 4em;
+	line-height: 0.8em;
+	padding-top: 10px;
 }
 
 h1 img {
@@ -821,12 +830,6 @@ h1 a:hover {
 	color: #0FAFFF;
 }
 
-h1 a,
-h2 a {
-	text-shadow: 1px 1px 1px #FFF, 2px 2px 4px rgba(0, 0, 0, 0.3);
-	letter-spacing: -1px;	
-}
-
 header span {
 	font-size: 0.889em;
 	color: #666;
@@ -836,8 +839,9 @@ header div {
 	font-weight: 300;
 	font-style: italic;
 	font-size: 0.889em;
-	margin-top: 0.5em;
-	padding-top: 24px;
+	position: fixed;
+	top: 195px;
+	left: 4%;
 }
 
 header div a {
@@ -856,26 +860,27 @@ h1 a:hover .dark {
 
 header div ul {
 	width: 100%;
+	list-style-type: none;
 }
 
 header div ul li {
-	display: inline;
 	margin: 0 20px 0 0;
 }
 
 /* Main */
-section,
-article {
-	margin-top: 40px;
+section {
+	width: 70%;
+	float: right;
 }
 
-article hgroup {
-	text-align: center;
+article {
+	margin: 40px 5.714% 0 0;
 }
 
 h2 {
+	font-family: 'Oswald';
 	font-size: 3.375em;
-	line-height: 1.1em;
+	line-height: 1.3em;
 }
 
 h2 a {
@@ -884,7 +889,6 @@ h2 a {
 
 h3 {
 	line-height: 1.1em;
-	text-align: center;
 }
 
 .article-meta {
@@ -893,7 +897,6 @@ h3 {
 	font-weight: 300;
 	font-style: italic;
 	color: #666;
-	text-align: center;
 	margin-top: 5px;
 }
 
@@ -902,16 +905,8 @@ div.entry {
 }
 
 section nav {
-	max-width: 960px;
-}
-
-div.entry,
-section nav {
-	margin: 1.333em auto;
-}
-
-section nav {
-	margin: 0 auto 5em auto;
+	max-width: 660px;
+	margin: 0 auto 5em 0;
 }
 
 section .tags a,
@@ -956,7 +951,7 @@ blockquote {
 }
 
 .commentlist {
-	margin: 20px auto;
+	margin: 20px 0;
 }
 
 .comments,
@@ -1019,7 +1014,6 @@ div.tags {
 	display: block;
 	width: 75%;
 	max-width: 660px;
-	margin: 1em auto 0;
 }
 
 #commentform textarea {
@@ -1052,9 +1046,19 @@ div.tags {
 
 /* Footer */
 footer {
-	text-align: center;
 	font-size: 0.85em;
 	margin: 2em auto;
+}
+
+footer#meta {
+	width: 26%;
+	position: fixed;
+	top: 370px;
+	left: 4%;
+}
+
+footer#meta p {
+	margin: 0 30px 0 0;
 }
 
 /* Jetpack */
@@ -1083,124 +1087,83 @@ div.sharedaddy a.sd-button {
 
 /* iPad in portrait & landscape */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { 
-	body {
-		font-size: 22px;
-		background: #FFF url(img/background-lighter.png) repeat 0px 0px;
-	}
-	
-	section,
-	footer {
-		max-width: 1024px;
-		width: 90%;
-	}
-	
-	div.entry {
-		max-width: 1024px;
-	}
-
-	.comments,
-	.commentlist {
-		max-width: 1024px;
-		font-size: 1em;
-		line-height: 1.4em;
-	}
-	
-	#commentform {
-		display: block;
-		width: 100%;
-		max-width: 1024px;
-	}
-
-	#commentform textarea {
-		width: 98%;
-		max-width: 1024px;
+	.social {
+		font-size: 2em;
 	}
 }
 
 /* iPhone 5 in portrait & landscape */
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {  
-	body {
-		font-size: 50px;
-		background: #FFF url(img/background-lighter.png) repeat 0px 0px;
-	}
-	
-	section,
-	footer {
-		max-width: 1024px;
-		width: 90%;
-	}
-	
-	div.entry {
-                max-width: 1024px;
+	h1 {
+		font-size: 3em;
 	}
 
 	h2 {
-		font-size: 1.8em;
-		line-height: 1.1em;
+		font-size: 2em;
 	}
-	
-	header div.right,
+
+	.social {
+		display: none;
+	}
+
+	.right,
+	.left {
+		float: none !important;
+	}
+
+	header {
+		width: 100%;
+	}
+
+	header hgroup {
+		width: 100%;
+	 	position: relative;
+		float: none !important;
+		top: 0;
+		left: 0;
+	}
+
+	header hgroup h1 {
+		width: 100%;
+		text-align: center;
+		margin: 1em 0;
+	}
+
 	header hgroup > span {
 		display: none;
 	}
 
-	header hgroup h1 img {
-		width: 64px;
-		height: 64px;
+	section {
+		width: 90%;
+		float: none;
 	}
-	
-	header hgroup {
+
+	.entry img {
 		width: 100%;
-		margin: 1em 0;
 	}
 
-	header hgroup h1 {
-		max-width: 1024px;
-		text-align: center;
-	}
-
-	.commentlist {
-		margin-bottom: 1em;
-	}
-
-	.comments,
-	.commentlist {
-		max-width: 1024px;
-		font-size: 1em;
-		line-height: 1.4em;
-	}
-
-	.cmtinfo cite {
-		font-style: normal;
-	}
-
-	.commentlist li.authorcomment {
-		background: #FCF6E3;
-	}
-
-	.comments,
-	.commentlist {
-		max-width: 1024px;
-		font-size: 1em;
-		line-height: 1.4em;
+	footer#meta {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
 	}
 	
+	footer#meta p {
+		margin: 0.5em;
+	}
+
 	#commentform {
-		display: block;
-		width: 100%;
-		max-width: 1024px;
+		width: 90%;
 	}
 
-	#commentform input,
-	#commentform textarea {
-		font-size: 0.889em;
-		line-height: 1.3335em;
-		width: 98% !important;
-		max-width: 1024px;
+	#commentform .left,
+	#commentform .right {
+		width: 100%;
+		float: none !important;
 	}
 }
 
 /* iPhone 2G-4S in portrait & landscape */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { 
-	
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { 	
 }
