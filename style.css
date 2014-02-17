@@ -606,6 +606,30 @@ Last updated:
 .fi-zoom-in:before { content: "\f219"; }
 .fi-zoom-out:before { content: "\f21a"; }
 
+.fi-social-github:hover {
+	color: #4183C4;
+}
+
+.fi-social-linkedin:hover {
+	color: #1A85BC;
+}
+
+.fi-social-twitter:hover {
+	color: #55ACEE;
+}
+
+.fi-rss:hover {
+	color: #FF8500;
+}
+
+.fi-social-github:hover span,
+.fi-social-linkedin:hover span,
+.fi-social-twitter:hover span,
+.fi-rss:hover span,
+.fi-torso:hover span {
+	color: #CCC;
+}
+
 /* Reset All */
 
 * {
@@ -803,15 +827,15 @@ header {
 
 header hgroup {
   position: fixed;
-  top: 70px;
+  top: 75px;
   left: 4%;
 }
 
 h1 {
 	font-family: 'Medula One';
+	font-weight: 400;
 	font-size: 4em;
-	line-height: 0.8em;
-	padding-top: 10px;
+	line-height: 0.875em;
 }
 
 h1 img {
@@ -819,10 +843,13 @@ h1 img {
 }
 
 h1 a { 
+	color: #E4E4E4;
 	color: #41444C;
+	text-shadow: 1px 1px 2px #FFF;
 }
 
 h1 a .dark {
+	color: #E4E4E4;
 	color: #151B1E;
 }
 
@@ -830,7 +857,7 @@ h1 a:hover {
 	color: #0FAFFF;
 }
 
-header span {
+header > span {
 	font-size: 0.889em;
 	color: #666;
 }
@@ -878,13 +905,17 @@ article {
 }
 
 h2 {
+	font-family: 'Medula One';
 	font-family: 'Oswald';
-	font-size: 3.375em;
-	line-height: 1.3em;
+	font-weight: 400;
+	font-size: 3em;
+	line-height: 1.25em;
 }
 
 h2 a {
+	color: #E4E4E4;
 	color: #151B1E;
+	text-shadow: 1px 1px 2px #FFF;
 }
 
 h3 {
@@ -1093,7 +1124,7 @@ div.sharedaddy a.sd-button {
 }
 
 /* iPhone 5 in portrait & landscape */
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {  
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
 	h1 {
 		font-size: 3em;
 	}
@@ -1137,8 +1168,12 @@ div.sharedaddy a.sd-button {
 		width: 90%;
 		float: none;
 	}
+	
+	div.entry {
+		max-width: 1280px;
+	}
 
-	.entry img {
+	div.entry img {
 		width: 100%;
 	}
 
