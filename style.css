@@ -1223,11 +1223,9 @@ div.sharedaddy a.sd-button {
 		width: 100%;
 	}
 
+	#author,
 	footer#meta {
-		position: relative;
-		top: 0;
-		left: 0;
-		width: 100%;
+		display: none;
 	}
 	
 	footer#meta p {
