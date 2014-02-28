@@ -24,10 +24,12 @@
   <div>
     <ul class="social">
     	<li><a href="<?php bloginfo('rss2_url'); ?>" class="fi-rss"> <span class="small">rodriguezortega.com/feed</span></a></li>
+			<!--
     	<li><a href="https://twitter.com/_victorrO_" rel="author" target="_blank" class="fi-social-twitter"> <span class="small">twitter.com/_victorro_</span></a></li>
     	<li><a href="http://es.linkedin.com/in/victorrodriguezortega" rel="author" target="_blank" class="fi-social-linkedin"> <span class="small">es.linkedin.com/in/victorro...</span></a></li>
     	<li><a href="https://github.com/VictorRO" target="_blank" class="fi-social-github"> <span class="small">github.com/VictorRO</span></a></li>
     	<li><a href="http://rodriguezortega.com" class="fi-torso"> <span class="small">rodriguezortega.com</span></a></li>
+				-->
     </ul>
   </div>
 </header>

@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-<section>
-  <?php get_template_part('loop'); ?>
-</section>
-<?php get_footer(); ?>
+<div id="wrapper" class="clearfix">
+	<section class="clearfix">
+  	<?php get_template_part('loop'); ?>
+	</section>
+	<?php get_footer(); ?>
+</div>

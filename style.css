@@ -750,8 +750,14 @@ a .dark,
 #submit {
 	color: #004A6F;
 	text-decoration: none;
+	transition-property: background-color, color, border;
+	transition-duration: .5s;
 	-webkit-transition-property: background-color, color, border;
 	-webkit-transition-duration: .5s;
+	-moz-transition-property: background-color, color, border;
+	-moz-transition-duration: .5s;
+	-o-transition-property: background-color, color, border;
+	-o-transition-duration: .5s;
 }
 
 a:hover {
@@ -820,6 +826,14 @@ html[xmlns] .clearfix {
 	vertical-align: middle;
 }
 
+/* wrapper */
+
+#wrapper {
+	position: relative;
+	width: 70%;
+	float: right;
+}
+
 /* Header */
 header {
 	width: 30%;
@@ -867,7 +881,7 @@ header div {
 	font-style: italic;
 	font-size: 0.889em;
 	position: fixed;
-	top: 195px;
+	top: 190px;
 	left: 4%;
 }
 
@@ -885,20 +899,24 @@ h1 a:hover .dark {
 	color: #006EA5;
 }
 
-header div ul {
+ul.social {
 	width: 100%;
 	list-style-type: none;
 }
 
-header div ul li {
+ul.social li {
 	margin: 0 20px 0 0;
 }
 
+ul.social a {
+	color: #151B1E;
+}
+
 /* Main */
-section {
+/* section {
 	width: 70%;
 	float: right;
-}
+} */
 
 article {
 	margin: 40px 5.714% 0 0;
@@ -1075,21 +1093,49 @@ div.tags {
 	margin-top: 0;
 }
 
+#author { 
+	position: fixed;
+	top: 260px;
+	left: 4%;
+	width: 24%;
+}
+
+#author h1 {
+	font-size: 1.25em;
+}
+
+#author h2 {
+	font-size: 1.25em;
+	font-weight: 300;
+}
+
+.author-meta {
+	width: 100%;
+}
+
+.avatar {
+	float: left;
+	margin-right: 1em;
+	margin-top: -0.5em;
+}
+
+.avatar-64 {
+	border-radius: 32px;
+}
+
+#disqus_thread {
+	max-width: 660px;
+}
+
 /* Footer */
 footer {
 	font-size: 0.85em;
 	margin: 2em auto;
 }
 
-footer#meta {
-	width: 26%;
-	position: fixed;
-	top: 370px;
-	left: 4%;
-}
-
+footer#meta,
 footer#meta p {
-	margin: 0 30px 0 0;
+	margin: 0;
 }
 
 /* Jetpack */
