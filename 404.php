@@ -3,20 +3,16 @@
 	<section class="clearfix">
 	  <article>
 	    <hgroup>
-	      <p>
-	        <?php echo date('j F, Y'); ?>
-	      </p>
-	      <h2 class="title">404 - The Server can not find it !</h2>
+	      <h2 class="title">404 - Sigue buscando!</h2>
 	    </hgroup>
 	    <div class="entry">
 	      <p>El artículo o página que estás buscando no está disponible.
 	        Puede que haya sido borrado o haya cambiado su URL.</p>
-	      <p>Por favor busca en el archivo / busca por el site.</p>
-	    </div>
-	    <div class="comments">
-	      <p>Escrito como "Not Found"</p>
+				<img src="<?php bloginfo('template_directory') ?>/img/404-guiru.png" />
+		    <p><?php echo date('j \d\e F, Y'); ?></p>
 	    </div>	          
-	  </article>      
+	  </article>
+		<?php get_template_part('authors'); ?>   
 	</section>
 	<?php get_footer();?>
 </div>

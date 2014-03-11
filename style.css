@@ -1241,6 +1241,12 @@ div.sharedaddy a.sd-button {
 		width: 100%;
 		float: none !important;
 	}
+	
+	#wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+	
 }
 
 /* iPhone 2G-4S in portrait & landscape */
