@@ -2,12 +2,12 @@
 <div id="wrapper" class="clearfix">
 	<section class="clearfix">
 	  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	    <?php get_template_part('article'); ?>  
+	    <?php get_template_part('article'); ?>
 			<?php get_template_part('author', get_the_author_meta('user_nicename')); ?>
 	  <?php endwhile; else: ?>
 	    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	  <?php endif; ?>
-	  <nav> 
+	  <nav>
 	    <ul>
 	      <?php
 	      $next_post = get_next_post();

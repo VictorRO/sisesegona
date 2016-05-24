@@ -4,8 +4,7 @@
 <?php endwhile; else: ?>
   <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 <?php endif; ?>
-<?php get_template_part('authors'); ?>
-<nav> 
+<nav>
   <ul>
     <li class="right"><?php echo previous_posts_link('Entradas nuevas →'); ?></li>
     <li class="left"><?php echo get_next_posts_link('← Entradas antiguas'); ?></li>

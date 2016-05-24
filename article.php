@@ -14,7 +14,3 @@
     <?php the_tags('', ' '); ?>
   </footer>
 </article>
-
-<div class="comments">
-  <?php comments_template(); ?>
-</div>

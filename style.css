@@ -1,4 +1,4 @@
-/* 
+/*
 Theme Name: Sisè Segona WP
 Theme URI: https://github.com/VictorRO/sisesegona
 Description: Sisè Segona Wordpress Theme for my own personal blog.
@@ -6,12 +6,12 @@ Version: 1.0
 Author: Víctor Rodríguez
 Author URI: http://www.rodriguezortega.com
 Tags: white, one-column, light, foundation-icons
-Last updated: 
+Last updated:
 */
 
 /* Typos */
 
-/* 
+/*
  * Foundation Icons v 3.0
  * Made by ZURB 2013 http://zurb.com/playground/foundation-icon-fonts-3
  * MIT License
@@ -723,12 +723,13 @@ a img.aligncenter {
 /* Common */
 
 body {
-	font-family: 'Open Sans', Arial, sans-serif;	
+	font-family: "Roboto Slab", serif;
+  font-weight: 300;
 	line-height: 1.5em;
-	font-size: 18px; 
-	color: #151B1E;
-	border-top: 10px solid #151B1E;
-	background: #FFF url(img/background-lighter.png) repeat 0px 0px;
+	font-size: 18px;
+	color: #022B39;
+	border-top: 10px solid #022B39;
+  background: #FFF;
 }
 
 p {
@@ -741,27 +742,17 @@ h4 + p {
 
 section,
 footer {
-	max-width: 1280px;
 	margin: 1.333em auto;
 }
 
 a,
-a .dark,
 #submit {
-	color: #004A6F;
+	color: #022B39;
 	text-decoration: none;
-	transition-property: background-color, color, border;
-	transition-duration: .5s;
-	-webkit-transition-property: background-color, color, border;
-	-webkit-transition-duration: .5s;
-	-moz-transition-property: background-color, color, border;
-	-moz-transition-duration: .5s;
-	-o-transition-property: background-color, color, border;
-	-o-transition-duration: .5s;
 }
 
 a:hover {
-	color: #0FAFFF;
+	color: #022B39;
 }
 
 pre {
@@ -802,15 +793,15 @@ pre.prettyprint {
 	line-height: 0;
 	height: 0;
 }
- 
+
 .clearfix {
 	display: inline-block;
 }
- 
+
 html[xmlns] .clearfix {
 	display: block;
 }
- 
+
 * html .clearfix {
 	height: 1%;
 }
@@ -830,50 +821,57 @@ html[xmlns] .clearfix {
 
 #wrapper {
 	position: relative;
-	width: 70%;
-	float: right;
+	width: 100%;
 }
 
 /* Header */
 header {
-	width: 30%;
+	width: 100%;
+  background: url(img/fondo-header.png) center center no-repeat;
+  background-size: cover;
+  height: 455px;
 }
 
 header hgroup {
-  position: fixed;
-  top: 75px;
-  left: 4%;
+  padding-top: 1px;
+  width: 100%;
+  text-align: center;
+}
+
+header h1 {
+  margin-top: 200px;
+  margin-bottom: 20px;
 }
 
 h1 {
-	font-family: 'Medula One';
+	font-family: "Rozha One", serif;
 	font-weight: 400;
-	font-size: 4em;
+	font-size: 57px;
 	line-height: 0.875em;
+  color: #022B39;
 }
 
 h1 img {
 	vertical-align: -5px;
 }
 
-h1 a { 
-	color: #E4E4E4;
-	color: #41444C;
-	text-shadow: 1px 1px 2px #FFF;
+h1 a {
+	color: #022B39;
 }
 
-h1 a .dark {
-	color: #E4E4E4;
-	color: #151B1E;
+h1 a .light {
+	color: #746B5C;
+  font-size: 1.3em;
+  vertical-align: middle;
 }
 
 h1 a:hover {
-	color: #0FAFFF;
+	color: #022B39;
 }
 
-header > span {
-	font-size: 0.889em;
-	color: #666;
+header span {
+	font-size: 24px;
+	max-width: 400px;
 }
 
 header div {
@@ -881,22 +879,18 @@ header div {
 	font-style: italic;
 	font-size: 0.889em;
 	position: fixed;
-	top: 190px;
+	top: 580px;
 	left: 4%;
 }
 
 header div a {
 	font-style: normal;
 	font-weight: normal;
-	color: #151B1E;
+	color: #022B39;
 }
 
 header div a:hover {
-	color: #0FAFFF;
-}
-
-h1 a:hover .dark {
-	color: #006EA5;
+	color: #022B39;
 }
 
 ul.social {
@@ -909,30 +903,32 @@ ul.social li {
 }
 
 ul.social a {
-	color: #151B1E;
+	color: #022B39;
 }
 
 /* Main */
-/* section {
-	width: 70%;
-	float: right;
-} */
+section,
+footer {
+	width: 95%;
+	margin: 0 2.5%;
+}
 
 article {
-	margin: 40px 5.714% 0 0;
+	margin: 40px 0;
 }
 
 h2 {
-	font-family: 'Medula One';
-	font-family: 'Oswald';
+	font-family: "Rozha One", serif;
 	font-weight: 400;
 	font-size: 3em;
 	line-height: 1.25em;
+  text-align: center;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 h2 a {
-	color: #E4E4E4;
-	color: #151B1E;
+	color: #022B39;
 	text-shadow: 1px 1px 2px #FFF;
 }
 
@@ -941,21 +937,28 @@ h3 {
 }
 
 .article-meta {
+  font-family: "PT Sans Narrow", sans-serif;
 	font-size: 1em;
 	line-height: 1.4em;
 	font-weight: 300;
-	font-style: italic;
-	color: #666;
+	color: #022B39;
 	margin-top: 5px;
+  text-align: center;
 }
 
 div.entry {
 	max-width: 660px;
+  margin: 0 auto;
+}
+
+footer.tags {
+  max-width: 660px;
+  line-height: 35px;
 }
 
 section nav {
-	max-width: 660px;
-	margin: 0 auto 5em 0;
+	max-width: 1320px;
+	margin: 0 auto 5em auto;
 }
 
 section .tags a,
@@ -980,6 +983,7 @@ section nav a:hover,
 section nav ul li {
 	list-style: none;
 	display: inline;
+  line-height: 40px;
 }
 
 .entry ul,
@@ -989,7 +993,7 @@ section nav ul li {
 
 blockquote {
 	margin: 0 1.333em;
-	border-left: 2px solid #004A6F;
+	border-left: 1px solid #728990;
 	padding: 0 1.333em;
 	font-style: italic;
 	color: #333;
@@ -1093,30 +1097,51 @@ div.tags {
 	margin-top: 0;
 }
 
-#author { 
-	position: fixed;
-	top: 260px;
-	left: 4%;
-	width: 24%;
+#author {
+  margin: 2em auto;
+  padding: 15px;
+  background-color: #FCF4EC;
+  max-width: 660px;
 }
 
 #author h1 {
+  font-family: "PT Sans Narrow", sans-serif;
 	font-size: 1.25em;
+  margin-top: 0.5em;
 }
 
 #author h2 {
-	font-size: 1.25em;
+  margin-top: 15px;
+  font-family: "Roboto Slab", serif;
+	font-size: 14px;
+  line-height: 22px;
 	font-weight: 300;
+  width: 75%;
+  margin: 15px auto 0;
 }
 
 .author-meta {
 	width: 100%;
+  text-align: center;
+}
+
+.author-meta ul {
+  font-size: 14px;
+  text-align: center;
+  list-style: none;
+  width: 75%;
+  margin: 15px auto 0;
+}
+
+.author-meta ul li {
+  border-top: 1px solid #022B39;
+  border-bottom: 1px solid #022B39;
+  margin-top: -1px;
+  padding: 10px;
 }
 
 .avatar {
-	float: left;
-	margin-right: 1em;
-	margin-top: -0.5em;
+	margin-top: 15px;
 }
 
 .avatar-64 {
@@ -1130,12 +1155,13 @@ div.tags {
 /* Footer */
 footer {
 	font-size: 0.85em;
-	margin: 2em auto;
+	margin: 5em auto 2em auto;
 }
 
 footer#meta,
 footer#meta p {
 	margin: 0;
+  text-align: center;
 }
 
 /* Jetpack */
@@ -1163,7 +1189,7 @@ div.sharedaddy a.sd-button {
 /********* responsive adaptation *******/
 
 /* iPad in portrait & landscape */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 	.social {
 		font-size: 2em;
 	}
@@ -1171,12 +1197,25 @@ div.sharedaddy a.sd-button {
 
 /* iPhone 5 in portrait & landscape */
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
-	h1 {
-		font-size: 3em;
-	}
+  body {
+    font-size: 16px;
+  }
+  
+  header {
+    height: 255px;
+  }
+
+  header h1 {
+    font-size: 2em;
+    margin-top: 100px;
+  }
+
+  header span {
+    font-size: 16px;
+  }
 
 	h2 {
-		font-size: 2em;
+		font-size: 1.7em;
 	}
 
 	.social {
@@ -1192,29 +1231,11 @@ div.sharedaddy a.sd-button {
 		width: 100%;
 	}
 
-	header hgroup {
-		width: 100%;
-	 	position: relative;
-		float: none !important;
-		top: 0;
-		left: 0;
-	}
-
-	header hgroup h1 {
-		width: 100%;
-		text-align: center;
-		margin: 1em 0;
-	}
-
-	header hgroup > span {
-		display: none;
-	}
-
 	section {
-		width: 90%;
+		width: 95%;
 		float: none;
 	}
-	
+
 	div.entry {
 		max-width: 1280px;
 	}
@@ -1223,11 +1244,15 @@ div.sharedaddy a.sd-button {
 		width: 100%;
 	}
 
-	#author,
-	footer#meta {
+  #author .author-meta h2,
+	#author .author-meta ul {
+    width: 95%;
+  }
+
+	/*footer#meta {
 		display: none;
-	}
-	
+	}*/
+
 	footer#meta p {
 		margin: 0.5em;
 	}
@@ -1241,14 +1266,9 @@ div.sharedaddy a.sd-button {
 		width: 100%;
 		float: none !important;
 	}
-	
-	#wrapper {
-		width: 90%;
-		margin: 0 auto;
-	}
-	
+
 }
 
 /* iPhone 2G-4S in portrait & landscape */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { 	
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 }
