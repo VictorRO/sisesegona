@@ -2,7 +2,7 @@
 Theme Name: Sisè Segona WP
 Theme URI: https://github.com/VictorRO/sisesegona
 Description: Sisè Segona Wordpress Theme for my own personal blog.
-Version: 1.0
+Version: 1.1
 Author: Víctor Rodríguez
 Author URI: http://www.rodriguezortega.com
 Tags: white, one-column, light, foundation-icons
@@ -872,6 +872,8 @@ h1 a:hover {
 header span {
 	font-size: 24px;
 	max-width: 400px;
+  display: inline-block;
+  line-height: 38px;
 }
 
 header div {
@@ -915,6 +917,10 @@ footer {
 
 article {
 	margin: 40px 0;
+}
+
+.entry a {
+  text-decoration: underline;
 }
 
 h2 {
@@ -1158,10 +1164,22 @@ footer {
 	margin: 5em auto 2em auto;
 }
 
-footer#meta,
-footer#meta p {
-	margin: 0;
+footer#meta {
   text-align: center;
+  font-family: "PT Sans Narrow", sans-serif;
+  background-color: #305B65;
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: -15px;
+}
+
+footer#meta a:hover {
+  text-decoration: underline;
+}
+
+footer#meta p {
+  margin: 5px;
+  text-transform: uppercase;
 }
 
 /* Jetpack */
@@ -1200,7 +1218,7 @@ div.sharedaddy a.sd-button {
   body {
     font-size: 16px;
   }
-  
+
   header {
     height: 255px;
   }

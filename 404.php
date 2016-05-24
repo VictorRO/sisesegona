@@ -10,9 +10,8 @@
 	        Puede que haya sido borrado o haya cambiado su URL.</p>
 				<img src="<?php bloginfo('template_directory') ?>/img/404-guiru.png" />
 		    <p><?php echo date('j \d\e F, Y'); ?></p>
-	    </div>	          
+	    </div>
 	  </article>
-		<?php get_template_part('authors'); ?>   
 	</section>
 	<?php get_footer();?>
 </div>

@@ -8,7 +8,7 @@
 		<h2><?php echo $author->user_description; ?></h2>
 		<ul>
 			<li><?php echo the_author_meta('user_email') ?></li>
-			<li><?php the_author_meta('aim'); ?></li>
+			<li><?php echo the_author_meta('aim'); ?></li>
 		</ul>
 	</div>
 
