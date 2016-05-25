@@ -898,9 +898,11 @@ header div a:hover {
 ul.social {
 	width: 100%;
 	list-style-type: none;
+  text-align: center;
 }
 
 ul.social li {
+  display: inline-block;
 	margin: 0 20px 0 0;
 }
 
@@ -1146,6 +1148,12 @@ div.tags {
   padding: 10px;
 }
 
+.author-meta i {
+  font-size: 25px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 .avatar {
 	margin-top: 15px;
 }
@@ -1230,6 +1238,7 @@ div.sharedaddy a.sd-button {
 
   header span {
     font-size: 16px;
+    line-height: 24px;
   }
 
 	h2 {
